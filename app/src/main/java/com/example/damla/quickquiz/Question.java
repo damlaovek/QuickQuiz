@@ -13,132 +13,13 @@ public class Question {
     private List<String> choices;
     private String correctAnswer;
 
-    public Question(String id){
+    public Question(String id, int score, List<String> choices,String correctAnswer){
         this.id=id;
-        switch(id){
-            case "science100":
-                questionText="";
-                score=100;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "science200":
-                questionText="";
-                score=200;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "science300":
-                questionText="";
-                score=300;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "science400":
-                questionText="";
-                score=400;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "science500":
-                questionText="";
-                score=500;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "sport100":
-                questionText="";
-                score=100;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "sport200":
-                questionText="";
-                score=200;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "sport300":
-                questionText="";
-                score=300;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "sport400":
-                questionText="";
-                score=400;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "sport500":
-                questionText="";
-                score=500;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "art100":
-                questionText="";
-                score=100;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "art200":
-                questionText="";
-                score=200;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "art300":
-                questionText="";
-                score=300;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "art400":
-                questionText="";
-                score=400;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-            case "art500":
-                questionText="";
-                score=500;
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                choices.add("");
-                correctAnswer="";
-        }
-
+        this.score=score;
+        this.choices=choices;
+        this.correctAnswer=correctAnswer;
     }
+
 
     public void setId(String id){
         this.id=id;
@@ -146,5 +27,37 @@ public class Question {
 
     public String getId(){
         return id;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public String getQuestionText() {
+        return questionText;
+    }
+
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
+    }
+
+    public List<String> getChoices() {
+        return choices;
+    }
+
+    public void setChoices(List<String> choices) {
+        this.choices = choices;
+    }
+
+    public String getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    public void setCorrectAnswer(String correctAnswer) {
+        this.correctAnswer = correctAnswer;
     }
 }

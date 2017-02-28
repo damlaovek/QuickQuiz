@@ -16,7 +16,15 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         String questionId=getIntent().getStringExtra("questionId");
-        question=new Question(questionId);
+        question=Categories.getInstance().getQuestion(questionId);
+        a.setText(question.getChoices().get(0));
+        b.setText(question.getChoices().get(1));
+        c.setText(question.getChoices().get(2));
+        d.setText(question.getChoices().get(3));
+        a.setOnClickListener(this);
+        b.setOnClickListener(this);
+        c.setOnClickListener(this);
+        d.setOnClickListener(this);
     }
 
     public Question getQuestion(){
@@ -26,6 +34,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Button clicked=(Button)findViewById(v.getId());
+        if(clicked.getText().toString().equals(question.getCorrectAnswer())){
 
+        }
     }
 }
