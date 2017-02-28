@@ -1,22 +1,33 @@
 package com.example.damla.quickquiz;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import static android.R.attr.id;
+import java.util.ArrayList;
 
-public class PlayGameActivity extends AppCompatActivity implements View.OnClickListener{
+public class PlayGameActivity extends Activity implements View.OnClickListener{
 
     TextView science, art, sport;
-    Button science100, science200, science300, science400, science500;
-    Button art100, art200, art300, art400, art500;
-    Button sport100, sport200, sport300, sport400, sport500;
-
-    Button k;
+    Button science100=(Button)findViewById(R.id.science100);
+    Button science200=(Button)findViewById(R.id.science200);
+    Button science300=(Button)findViewById(R.id.science300);
+    Button science400=(Button)findViewById(R.id.science400);
+    Button science500=(Button)findViewById(R.id.science500);
+    Button sport100=(Button)findViewById(R.id.sport100);
+    Button sport200=(Button)findViewById(R.id.sport200);
+    Button sport300=(Button)findViewById(R.id.sport300);
+    Button sport400=(Button)findViewById(R.id.sport400);
+    Button sport500=(Button)findViewById(R.id.sport500);
+    Button art100=(Button)findViewById(R.id.art100);
+    Button art200=(Button)findViewById(R.id.art200);
+    Button art300=(Button)findViewById(R.id.art300);
+    Button art400=(Button)findViewById(R.id.art400);
+    Button art500=(Button)findViewById(R.id.art500);
+    ArrayList<Integer> buttonColors=new ArrayList<Integer>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +47,27 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
         sport300.setOnClickListener(this);
         sport400.setOnClickListener(this);
         sport500.setOnClickListener(this);
+        if (savedInstanceState != null) {
+            buttonColors=User.getInstance().getQuestionsAnswered();
+            science100.setBackgroundColor(buttonColors.get(4));
+            science200.setBackgroundColor(buttonColors.get(3));
+            science300.setBackgroundColor(buttonColors.get(2));
+            science400.setBackgroundColor(buttonColors.get(1));
+            science500.setBackgroundColor(buttonColors.get(0));
+            art100.setBackgroundColor(buttonColors.get(9));
+            art200.setBackgroundColor(buttonColors.get(8));
+            art300.setBackgroundColor(buttonColors.get(7));
+            art400.setBackgroundColor(buttonColors.get(6));
+            art500.setBackgroundColor(buttonColors.get(5));
+            sport100.setBackgroundColor(buttonColors.get(14));
+            sport200.setBackgroundColor(buttonColors.get(13));
+            sport300.setBackgroundColor(buttonColors.get(12));
+            sport400.setBackgroundColor(buttonColors.get(11));
+            sport500.setBackgroundColor(buttonColors.get(10));
+        }
     }
+
+
 
     public void goQuestion(String questionId){
         Intent quiz=new Intent(getApplicationContext(),QuizActivity.class);
@@ -49,34 +80,49 @@ public class PlayGameActivity extends AppCompatActivity implements View.OnClickL
         switch(v.getId()){
             case R.id.science100:
                 goQuestion("science100");
+                break;
             case R.id.science200:
                 goQuestion("science200");
+                break;
             case R.id.science300:
                 goQuestion("science300");
+                break;
             case R.id.science400:
                 goQuestion("science400");
+                break;
             case R.id.science500:
                 goQuestion("science500");
+                break;
             case R.id.art100:
                 goQuestion("art100");
+                break;
             case R.id.art200:
                 goQuestion("art200");
+                break;
             case R.id.art300:
                 goQuestion("art300");
+                break;
             case R.id.art400:
                 goQuestion("art400");
+                break;
             case R.id.art500:
                 goQuestion("art500");
+                break;
             case R.id.sport100:
                 goQuestion("sport100");
+                break;
             case R.id.sport200:
                 goQuestion("sport200");
+                break;
             case R.id.sport300:
                 goQuestion("sport300");
+                break;
             case R.id.sport400:
                 goQuestion("sport400");
+                break;
             case R.id.sport500:
                 goQuestion("sport500");
+                break;
         }
     }
 }
