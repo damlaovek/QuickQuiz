@@ -11,6 +11,7 @@ public class LoginActivity extends Activity {
 
     EditText nickname;
     Button play;
+    boolean noName=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +25,22 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View v) {
                 User.getInstance().setNickname(nickname.getText().toString());
+                User.getInstance().deleteQuestionAnswered();
+                User.getInstance().setScore(0);
                 Intent playGame = new Intent(getApplicationContext(), PlayGameActivity.class);
                 startActivity(playGame);
                 finish();
             }
         });
-
+        nickname.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if(noName) {
+                    nickname.setText("");
+                    noName = false;
+                }
+            }
+        });
     }
-
 }
+

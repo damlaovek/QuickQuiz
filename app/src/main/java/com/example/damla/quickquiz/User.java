@@ -34,6 +34,12 @@ public class User {
         }
     }
 
+    public void deleteQuestionAnswered(){
+        for(int i=0;i<15;i++){
+            questionsAnswered.set(i,Color.GRAY);
+        }
+    }
+
     public void setNickname(String nickname){
         this.nickname=nickname;
     }

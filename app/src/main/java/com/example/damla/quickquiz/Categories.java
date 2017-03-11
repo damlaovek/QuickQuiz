@@ -33,7 +33,7 @@ public class Categories {
                 choices.add("Time");
                 choices.add("Distance");
                 choices.add("Weight");
-                correctAnswer = "b";
+                correctAnswer = "Distance";
                 id=4;
                 break;
             case "science200":
@@ -43,7 +43,7 @@ public class Categories {
                 choices.add("Alchemy");
                 choices.add("Astronomy");
                 choices.add("Meteorology");
-                correctAnswer = "a";
+                correctAnswer = "Astrology";
                 id=3;
                 break;
             case "science300":
@@ -53,7 +53,7 @@ public class Categories {
                 choices.add("Uranium");
                 choices.add("Nitrogen");
                 choices.add("Carbon dioxide");
-                correctAnswer = "b";
+                correctAnswer = "Uranium";
                 id=2;
                 break;
             case "science400":
@@ -63,7 +63,7 @@ public class Categories {
                 choices.add("Wavelength");
                 choices.add("Velocity");
                 choices.add("Amplitude");
-                correctAnswer = "d";
+                correctAnswer = "Amplitude";
                 id=1;
                 break;
             case "science500":
@@ -73,7 +73,7 @@ public class Categories {
                 choices.add("Visible light waves");
                 choices.add("Sound waves");
                 choices.add("Gravity waves");
-                correctAnswer = "a";
+                correctAnswer = "Radio waves";
                 id=0;
                 break;
             case "sport100":
@@ -83,8 +83,8 @@ public class Categories {
                 choices.add("Circumnavigation of the earth by car");
                 choices.add("Formula One racing");
                 choices.add("Buggy-Jumping");
-                correctAnswer = "b";
-                id=9;
+                correctAnswer = "Circumnavigation of the earth by car";
+                id=14;
                 break;
             case "sport200":
                 questionText = "Which English Premier League football club supporters traditionally sing the song ‘You'll Never Walk Alone’ before commencement of the match?";
@@ -93,8 +93,8 @@ public class Categories {
                 choices.add("Manchester United");
                 choices.add("Liverpool FC");
                 choices.add("Leeds United FC");
-                correctAnswer = "c";
-                id=8;
+                correctAnswer = "Liverpool FC";
+                id=13;
                 break;
             case "sport300":
                 questionText = "Which 2 male tennis players have the most Wimbledon singles titles, seven each?";
@@ -103,8 +103,8 @@ public class Categories {
                 choices.add("Roger Federer and Raphael Nadal");
                 choices.add("Pete Sampras and Andre Agassi");
                 choices.add("Roger Federer and Pete Sampras");
-                correctAnswer = "d";
-                id=7;
+                correctAnswer = "Roger Federer and Pete Sampras";
+                id=12;
                 break;
             case "sport400":
                 questionText = "Which Australian was selected by the Milwaukee Bucks with the first overall pick in the 2005 National Basketball Association (NBA) Draft?";
@@ -113,8 +113,8 @@ public class Categories {
                 choices.add("Andrew Bogut");
                 choices.add("Patrick Mills");
                 choices.add("Luke Schenscher");
-                correctAnswer = "b";
-                id=6;
+                correctAnswer = "Andrew Bogut";
+                id=11;
                 break;
             case "sport500":
                 questionText = "At 9.58 seconds, Usain Bolt holds the record for the fastest time in the 100 metre sprint, but which sprinter holds the female record with 10.49 seconds?";
@@ -123,8 +123,8 @@ public class Categories {
                 choices.add("Shelly-Ann Fraser-Pryce");
                 choices.add("Florence Griffith-Joyner");
                 choices.add("Carmelita Jeter");
-                correctAnswer = "c";
-                id=5;
+                correctAnswer = "Florence Griffith-Joyner";
+                id=10;
                 break;
             case "art100":
                 questionText = "Early photographers made their images on which of these materials?";
@@ -133,8 +133,8 @@ public class Categories {
                 choices.add("Glass");
                 choices.add("Paper");
                 choices.add("Plastic");
-                correctAnswer = "b";
-                id=14;
+                correctAnswer = "Glass";
+                id=9;
                 break;
             case "art200":
                 questionText = "Which one of these is not a well-known Indian sculptor?";
@@ -143,8 +143,8 @@ public class Categories {
                 choices.add("Krishna Reddy");
                 choices.add("Henry Moore");
                 choices.add("Kumaradeva");
-                correctAnswer = "c";
-                id=13;
+                correctAnswer = "Henry Moore";
+                id=8;
                 break;
             case "art300":
                 questionText = "What did I.M. Pei design outside the Louvre, in Paris?";
@@ -153,8 +153,8 @@ public class Categories {
                 choices.add("Sarcophagus");
                 choices.add("Ziggurat");
                 choices.add("Pyramid");
-                correctAnswer = "d";
-                id=12;
+                correctAnswer = "Pyramid";
+                id=7;
                 break;
             case "art400":
                 questionText = "Who designed the Vietnam Veterans Memorial?";
@@ -163,8 +163,8 @@ public class Categories {
                 choices.add("Frank Llyod Wright");
                 choices.add("I.M. Pei");
                 choices.add("Frank Gehry");
-                correctAnswer = "a";
-                id=11;
+                correctAnswer = "Maya Lin";
+                id=6;
                 break;
             case "art500":
                 questionText="What does the Venus of Brassempouy represent?";
@@ -173,8 +173,8 @@ public class Categories {
                 choices.add("An old man");
                 choices.add("A woman's body");
                 choices.add("An angel");
-                correctAnswer = "c";
-                id=10;
+                correctAnswer = "A woman's body";
+                id=5;
                 break;
         }
         Question myQuestion=new Question(questionText, score, choices, correctAnswer,id);
